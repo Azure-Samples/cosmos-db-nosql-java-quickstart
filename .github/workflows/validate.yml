@@ -19,3 +19,9 @@ jobs:
         run: javac --version
       - name: Check Maven version
         run: mvn --version
+      - name: Compile Java project
+        run: mvn compile
+        working-directory: ./src/web
+      - name: Package Java project
+        run: mvn package
+        working-directory: ./src/web
