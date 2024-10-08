@@ -17,7 +17,7 @@ import com.azure.spring.data.cosmos.repository.config.EnableCosmosRepositories;
 public class CosmosConfiguration extends AbstractCosmosConfiguration {
 // </repository_configuration>
 
-    @Value("#{environment.COSMOS_DB_ENDPOINT}")
+    @Value("#{environment.AZURE_COSMOS_DB_NOSQL_ENDPOINT}")
     private String uri;
 
     // <create_client>
