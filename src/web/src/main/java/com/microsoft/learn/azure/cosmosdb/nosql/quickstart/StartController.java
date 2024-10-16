@@ -37,7 +37,6 @@ public class StartController {
         this.sendMessage(String.format("Get container:\t%s", "products"));
 
         {
-            // <create_item>
             Item item = new Item(
                 "70b63682-b93a-4c77-aad2-65501347265f",
                 "gear-surf-surfboards",
@@ -46,7 +45,7 @@ public class StartController {
                 false
             );
             Item created_item = repository.save(item);
-            // </create_item>
+
             this.sendMessage(String.format("Upserted item:\t%s", created_item));
         }
 
@@ -62,24 +61,22 @@ public class StartController {
             this.sendMessage(String.format("Upserted item:\t%s", created_item));
         }
 
-        // <read_item>
         PartitionKey partitionKey = new PartitionKey("gear-surf-surfboards");
         Optional<Item> existing_item = repository.findById("70b63682-b93a-4c77-aad2-65501347265f", partitionKey);
         if (existing_item.isPresent()) {
             // Do something  
         }
-        // </read_item>
+
         existing_item.ifPresent(i -> {
             this.sendMessage(String.format("Read item id:\t%s", i.getId()));
             this.sendMessage(String.format("Read item:\t%s", i));
         });
 
-        // <query_items>
         List<Item> items = repository.getItemsByCategory("gear-surf-surfboards");
         for (Item item : items) {
             // Do something
         }
-        // </query_items>
+
         this.sendMessage("Found items:");
         try {
             ObjectWriter writer = new ObjectMapper().writer().withDefaultPrettyPrinter();

@@ -5,7 +5,6 @@ import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-// <get_container>
 @Container(containerName = "products", autoCreateContainer = false)
 public class Item {
     private String id;
@@ -15,7 +14,6 @@ public class Item {
 
     @PartitionKey
     private String category;
-    // </get_container>
 
     public Item() {        
     }
