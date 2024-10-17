@@ -1,3 +1,15 @@
+---
+page_type: sample
+name: Quickstart: Azure Cosmos DB for NoSQL and Azure SDK for Java
+description: This is a simple Spring web application to illustrate common basic usage of Azure Cosmos DB for NoSQL and the Azure SDK for Java.
+urlFragment: template
+languages:
+- java
+- azdeveloper
+products:
+- azure-cosmos-db
+---
+
 # Quickstart: Azure Cosmos DB for NoSQL client library for Java
 
 This is a simple Spring Web application to illustrate common basic usage of Azure Cosmos DB for NoSQL's client library for Java. This sample application accesses an existing account, database, and container using the [`azure-spring-data-cosmos`](https://mvnrepository.com/artifact/com.azure/azure-spring-data-cosmos) and [`azure-identity`](https://mvnrepository.com/artifact/com.azure/azure-identity) packages from Maven. Modify the source code and leverage the Infrastructure as Code (IaC) Bicep assets to get up and running quickly.
