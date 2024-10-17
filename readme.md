@@ -1,6 +1,6 @@
 ---
 page_type: sample
-name: Quickstart: Azure Cosmos DB for NoSQL and Azure SDK for Java
+name: "Quickstart: Azure Cosmos DB for NoSQL and Azure SDK for Java"
 description: This is a simple Spring web application to illustrate common basic usage of Azure Cosmos DB for NoSQL and the Azure SDK for Java.
 urlFragment: template
 languages:
