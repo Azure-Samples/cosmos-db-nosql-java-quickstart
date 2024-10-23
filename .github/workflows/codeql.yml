@@ -30,10 +30,11 @@ jobs:
       uses: actions/setup-java@v4
       with:
         java-version: 21
+        distribution: microsoft
     - name: Build project
       working-directory: ./src
       run: |
-        dotnet build
+        mvn clean install
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
