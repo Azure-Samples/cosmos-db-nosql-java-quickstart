@@ -18,7 +18,7 @@ This is a simple Spring Web application to illustrate common basic usage of Azur
 
 - [Docker](https://www.docker.com/)
 - [Azure Developer CLI](https://aka.ms/azd-install)
-- [Java 21](https://www.oracle.com/java/technologies/downloads/)
+- [Java 21](https://learn.microsoft.com/java/openjdk/download#openjdk-21)
 
 ### Quickstart
 
