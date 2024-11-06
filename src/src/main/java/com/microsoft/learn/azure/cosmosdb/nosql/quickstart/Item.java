@@ -5,7 +5,7 @@ import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@Container(containerName = "products", autoCreateContainer = false)
+@Container(containerName = "${CONFIGURATION__AZURECOSMOSDB__CONTAINERNAME}", autoCreateContainer = false)
 public class Item {
     private String id;
     private String name;
