@@ -32,7 +32,7 @@ jobs:
         java-version: 21
         distribution: microsoft
     - name: Build project
-      working-directory: ./src/web
+      working-directory: ./src
       run: |
         mvn clean install
     - name: Perform CodeQL Analysis

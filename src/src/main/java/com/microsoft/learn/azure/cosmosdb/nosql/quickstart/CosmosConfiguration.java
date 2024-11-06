@@ -15,8 +15,11 @@ import com.azure.spring.data.cosmos.repository.config.EnableCosmosRepositories;
 @EnableCosmosRepositories
 public class CosmosConfiguration extends AbstractCosmosConfiguration {
 
-    @Value("#{environment.AZURE_COSMOS_DB_NOSQL_ENDPOINT}")
-    private String uri;
+    @Value("${CONFIGURATION__AZURECOSMOSDB__ENDPOINT}")
+    private String endpoint;
+
+    @Value("${CONFIGURATION__AZURECOSMOSDB__DATABASENAME}")
+    private String databaseName;
 
     @Bean
     public CosmosClientBuilder getCosmosClientBuilder() {
@@ -25,7 +28,7 @@ public class CosmosConfiguration extends AbstractCosmosConfiguration {
             .build();
             
         return new CosmosClientBuilder()
-            .endpoint(uri)
+            .endpoint(endpoint)
             .credential(azureTokenCredential);
         // </create_client>
     }
@@ -39,6 +42,6 @@ public class CosmosConfiguration extends AbstractCosmosConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        return "cosmicworks";
+        return databaseName != null ? databaseName : "cosmicworks";
     }
 }
