@@ -38,7 +38,7 @@ public class StartController {
 
         {
             Item item = new Item(
-                "70b63682-b93a-4c77-aad2-65501347265f",
+                "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
                 "gear-surf-surfboards",
                 "Yamba Surfboard",
                 12,
@@ -51,7 +51,7 @@ public class StartController {
 
         {
             Item item = new Item(
-                "25a68543-b90c-439d-8332-7ef41e06a0e0",
+                "bbbbbbbb-1111-2222-3333-cccccccccccc",
                 "gear-surf-surfboards",
                 "Kiama Classic Surfboard",
                 4,
@@ -62,7 +62,7 @@ public class StartController {
         }
 
         PartitionKey partitionKey = new PartitionKey("gear-surf-surfboards");
-        Optional<Item> existing_item = repository.findById("70b63682-b93a-4c77-aad2-65501347265f", partitionKey);
+        Optional<Item> existing_item = repository.findById("aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb", partitionKey);
         if (existing_item.isPresent()) {
             // Do something  
         }
