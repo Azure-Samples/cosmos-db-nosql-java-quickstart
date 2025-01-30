@@ -12,7 +12,6 @@
     "customizations": {
       "vscode": {
         "extensions": [
-          "bierner.markdown-mermaid",
           "ms-azuretools.azure-dev",
           "ms-azuretools.vscode-cosmosdb",
           "vscjava.vscode-java-pack"
